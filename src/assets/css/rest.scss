@@ -1,0 +1,28 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #5C6E81;
+}
+.application.theme--light {
+  color: #5C6E81;
+}
+a {
+  text-decoration: none;
+}
+
+body p {
+  margin-bottom: 0;
+}

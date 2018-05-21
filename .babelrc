@@ -1,5 +1,7 @@
 {
+  "plugins": ["syntax-dynamic-import"],
   "presets": [
-    "@vue/app"
+    ["@babel/env", { "ignoreBrowserslistConfig": true, "targets": { "node": "current" } }],
+    "@babel/flow"
   ]
 }

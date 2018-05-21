@@ -1,0 +1,24 @@
+.completion-input-box {
+  margin-top: .75rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  input {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 2.75rem;
+    outline: none;
+    text-align: left;
+    background-color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    flex: 1;
+  }
+  .input-box-name {
+    font-size: 1.25rem;
+    color: #4A4A4A;
+    text-align: left;
+  }
+}

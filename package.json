@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --open",
+    "dev": "vue-cli-service serve --open",
+    "creat": "node generator",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit"
   },
@@ -13,9 +14,15 @@
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^6.0.0",
     "vue-router": "^3.0.1",
+    "axios": "^0.18.0",
+    "vuetify": "^1.0.14",
+    "vuex-class": "^0.3.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/preset-flow": "^7.0.0-beta.46",
+    "@types/webpack-env": "^1.13.6",
+    "@types/jest": "^22.0.1",
     "@types/chai": "^4.1.0",
     "@types/mocha": "^2.2.46",
     "@vue/cli-plugin-babel": "^3.0.0-beta.10",
@@ -27,6 +34,9 @@
     "chai": "^4.1.2",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
+    "html-loader": "^0.5.5",
+    "moment": "^2.22.1",
+    "ts-jest": "^22.0.1",
     "vue-template-compiler": "^2.5.13"
   },
   "browserslist": [

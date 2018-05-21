@@ -1,19 +1,24 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
+    "target": "es2015",
+    "module": "esnext", // 开启异步加载组件
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
     "jsx": "preserve",
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames":true,
+    "listFiles": true,
+    "pretty": true,
+    "allowJs": true,
+    "checkJs": true,
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
       "node",
-      "mocha",
-      "chai"
+      "jest"
     ],
     "paths": {
       "@/*": [
@@ -23,10 +28,12 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx",
+    "src/**/*.js",
     "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "src/*.vue",
+    "src/*.ts",
+    "src/*.js",
+    "test/**/*.ts"
   ],
   "exclude": [
     "node_modules"
