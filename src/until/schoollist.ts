@@ -1,3 +1,4 @@
+// 西安所有学校对象
 export default [
   {
     "id": 999,

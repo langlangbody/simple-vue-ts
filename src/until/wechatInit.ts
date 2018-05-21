@@ -1,6 +1,9 @@
+// 微信分享 封装 内部的参数自己定
+// 使用的时候 参数自己配制 注意在组件加载完成后调用wechatInit方法
+
 import Api_key_str from "@/config/api-params";
 import axios from 'axios';
-export const wechatInit = async (getshareimg:string,username:string)=> {
+export const wechatInit = async (getshareimg?:string,username?:string)=> {
   // fetch wechat signature
   let shareUrl = window.location.href
   let params: object = {
@@ -12,11 +15,9 @@ export const wechatInit = async (getshareimg:string,username:string)=> {
     signCode = signResp.data.result
   if (signCode === 'success') {
     let wx = require('weixin-js-sdk')
-    let shareTitle = getshareimg ? `室友${username}在爬520脱单墙，请帮TA点赞扶TA上墙` : '520，帮室友脱单大作战有奖活动',
-      shareDesc = getshareimg ? '多点一个赞，就能为室友脱单多一份可能性' :'身为中国好室友，帮室友脱单义不容辞。何况还有好室友大奖拿！快来点赞支持室友上墙吧！',
+    let shareTitle = getshareimg ? `小伙不错` : '谢谢',
+      shareDesc = getshareimg ? '这是以后的开发的模版' :'这个模版可以使用好一整子',
       shareCover = getshareimg ? getshareimg : 'http://cdn.shiyi.co/cleen_520/avatar/dog_avatar.png'
-    // append host url
-    // shareCover = 'http://cleen.io' + shareCover
 
     // wx sdk init
     wx.config({

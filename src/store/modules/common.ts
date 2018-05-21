@@ -7,9 +7,11 @@ const state: StateSnackBar = {
 }
 
 const mutations: MutationTree<StateSnackBar> = {
+  // 发送请求的状态
   [TYPES.AXUIS_STATE](state: StateSnackBar, params: boolean) {
     state.axiosState = params
   },
+  // 分享拖片的切换
   [TYPES.SAVE_SHARE_IMG](state: StateSnackBar, params: string) {
     state.shareImg = params
   }
