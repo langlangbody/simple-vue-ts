@@ -1,6 +1,21 @@
 ## 关于typescript详细配制
 [tsconfig配制详情](https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/Compiler%20Options.html)
 
+## 关于命令
+**`npm run creat [paths...]`**
+本人对于不断的创建组件文件夹已经很烦恼所以参考网上 生成了基于node的脚本！
+
+运行
+```shell
+npm run creat views/Home 
+// or
+npm run creat components/Home 
+```
+会在对应的文件`views`or`components`夹中生成 `index.ts`,`home.html`,`home.scss`
+
+生成的文件内部都有基本的使用代码  如果对这个生成的文件有个人需求 可以参考 项目目录下的`generator.js` 文件自行修改
+
+
 ## Vue-Property-Decorator
 vue-property-decorator 是在 vue-class-component 上增强了更多的结合 Vue 特性的装饰器，新增了这 7 个装饰器
 
