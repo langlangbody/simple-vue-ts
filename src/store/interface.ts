@@ -1,9 +1,8 @@
 interface StateSnackBar {
   axiosState:boolean,
-  shareImg:string
+  shareImg:string,
+  snack:string
 }
-
 interface StateRoot {
-  appTitle: string
-  isOnline: boolean
+  params: string|boolean|object
 }

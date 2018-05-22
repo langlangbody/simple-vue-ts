@@ -1,6 +1,6 @@
  /**
  * @author xll
- * @template xllTemp
+ * @template Xteam
  * time
 */
 import { Component, Vue } from 'vue-property-decorator'

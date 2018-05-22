@@ -1,9 +1,10 @@
 import * as TYPES from '../types'
-import { MutationTree, ActionTree, Module } from "vuex";
+import { MutationTree, Module } from "vuex";
 
 const state: StateSnackBar = {
   axiosState: false,
-  shareImg:''
+  shareImg:'',
+  snack:''
 }
 
 const mutations: MutationTree<StateSnackBar> = {
@@ -11,9 +12,13 @@ const mutations: MutationTree<StateSnackBar> = {
   [TYPES.AXUIS_STATE](state: StateSnackBar, params: boolean) {
     state.axiosState = params
   },
-  // 分享拖片的切换
+  // 分享图片的切换
   [TYPES.SAVE_SHARE_IMG](state: StateSnackBar, params: string) {
     state.shareImg = params
+  },
+  // snackbar提示窗状态
+  [TYPES.SNACK](state: StateSnackBar, params: string) {
+    state.snack = params
   }
 }
 
