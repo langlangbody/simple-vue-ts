@@ -1,6 +1,21 @@
 <div class="home">
   <router-link to="/about">about</router-link>
   <div>
+    <v-tabs
+    slot="extension"
+    v-model="model"
+    centered
+    color="cyan"
+    slider-color="yellow"
+  >
+    <v-tab
+      v-for="i in 3"
+      :key="i"
+      :href="`#tab-${i}`"
+    >
+      Item {{ i }}
+    </v-tab>
+  </v-tabs>
     <v-tabs-items v-model="model">
       <v-tab-item
         v-for="i in 3"
