@@ -5,7 +5,9 @@ import './index.scss'
 })
 export default class Index extends Vue {
   private msg:string = 'index'
+  
   created() {
+
   }
   mounted() {
 
