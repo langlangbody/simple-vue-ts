@@ -15,12 +15,6 @@ module.exports = {
     config.resolve.alias
       .set('vue$', 'vue/dist/vue.esm.js')
     
-    config.externals = {
-      'vue': 'Vue',
-      'vuex': 'Vuex',
-      'vue-router': 'VueRouter',
-      'vuetify': 'Vuetify'
-      }
 
     config.module
       .rule('html')

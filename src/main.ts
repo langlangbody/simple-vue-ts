@@ -3,9 +3,9 @@ import App from './App'
 import router from './route'
 import store from './store'
 // vuetify
-// import Vuetify from "vuetify"
+import Vuetify from "vuetify"
 // import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
-// Vue.use(Vuetify)
+Vue.use(Vuetify)
 import './config/axios-config';
 
 // 注册全局的钩子函数，vue-property-decorator要求这么写的
