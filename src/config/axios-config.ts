@@ -1,13 +1,5 @@
 import axios from 'axios';
-// import store from "../store/index";
-// import { chang_Axios } from "../store/actions";
-if (process.env.NODE_ENV === 'development') {
-  axios.defaults.baseURL = 'http://uat.shiyi.co/api/v1' //设置 API 根路径
-} else {
-  // axios.defaults.baseURL = 'http://uat.shiyi.co/api/v1' //设置 API 根路径
-  axios.defaults.baseURL = 'http://node1.shiyi.co:4096/api/v1' //设置 API 根路径
-}
-
+// axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? 'http1':'http2'
 axios.defaults.timeout = 10 * 1000;
 interface Res {
   result:string,
