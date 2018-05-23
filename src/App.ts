@@ -1,11 +1,11 @@
 import { Component, Vue } from 'vue-property-decorator'
 @Component({
   template: `
-  <v-app>
+  <div id="app">
     <transition name="v-fade-transition">
         <router-view/>
     </transition>
-  </v-app>
+  </div>
   `,
   components: {
     // SnackBar:() => import('./components/Common/TheSnackBar')

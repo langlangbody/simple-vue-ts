@@ -1,7 +1,8 @@
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const CompressionPlugin = require('compression-webpack-plugin');
+const BrotliPlugin = require('brotli-webpack-plugin');
 // vue.config.js
-const path = require('path')
 module.exports = {
-
   baseUrl: '/',
 
   // use the full build with in-browser compiler?
@@ -14,13 +15,35 @@ module.exports = {
     config.resolve.alias
       .set('vue$', 'vue/dist/vue.esm.js')
     
+    config.externals = {
+      'vue': 'Vue',
+      'vuex': 'Vuex',
+      'vue-router': 'VueRouter',
+      'vuetify': 'Vuetify'
+      }
+
     config.module
       .rule('html')
       .test(/\.(html)$/)
       .use('html-loader')
       .loader('html-loader')
   },
-
+  configureWebpack: (config) => {
+    if (process.env.NODE_ENV === 'production') {
+      return {
+        plugins: [
+          new CompressionPlugin(),
+          new BrotliPlugin(),
+          new BundleAnalyzerPlugin({analyzerMode: 'static'}),
+        ]
+      };
+    }
+    return {
+      plugins: [
+        new BundleAnalyzerPlugin(),
+      ]
+    }
+  },
   // generate sourceMap for production build?
   productionSourceMap: false,
 
@@ -51,7 +74,12 @@ module.exports = {
     // } // string | Object
     // before: app => { }
   },
-
+  css: {
+    extract: true,
+    localIdentName: '[name]_[local]_[hash:base64:5]',
+    sourceMap: false,
+    // loaderOptions: {}
+  },
   // 第三方插件
   pluginOptions: {}
 }

@@ -3,9 +3,9 @@ import App from './App'
 import router from './route'
 import store from './store'
 // vuetify
-import Vuetify from "vuetify"
-import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
-Vue.use(Vuetify)
+// import Vuetify from "vuetify"
+// import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
+// Vue.use(Vuetify)
 import './config/axios-config';
 
 // 注册全局的钩子函数，vue-property-decorator要求这么写的
@@ -37,6 +37,6 @@ new Vue({
 }).$mount('#app')
 
 // 指定组件的渲染和观察期间未捕获错误的处理函数。这个处理函数被调用时，可获取错误信息和 Vue 实例。
-// Vue.config.errorHandler = function (err, vm, info) {
-//   console.error('捕获全局的错误信息',err,info);
-// }
+Vue.config.errorHandler = function (err, vm, info) {
+  console.error('错误信息',info);
+}

@@ -32,13 +32,16 @@
     "@vue/cli-service": "^3.0.0-beta.10",
     "@vue/test-utils": "^1.0.0-beta.10",
     "babel-plugin-component": "^1.1.1",
+    "brotli-webpack-plugin": "^1.0.0",
     "chai": "^4.1.2",
+    "compression-webpack-plugin": "^1.1.11",
     "html-loader": "^0.5.5",
     "moment": "^2.22.1",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "ts-jest": "^22.0.1",
-    "vue-template-compiler": "^2.5.13"
+    "vue-template-compiler": "^2.5.13",
+    "webpack-bundle-analyzer": "^2.13.0"
   },
   "browserslist": [
     "> 1%",
