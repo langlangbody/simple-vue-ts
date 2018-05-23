@@ -2,10 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { RouteConfig, RouterOptions } from 'vue-router'
 
-if (process.env.NODE_ENV === 'development') {
-  Vue.use(Router)
-  // Vue.use(VueRouter)
-}
+Vue.use(Router)
 /**
  * @author xll
  * @name meta

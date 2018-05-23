@@ -4,9 +4,7 @@ import { module as common } from './modules/common'
 import * as getters from './getters'
 import * as actions from './actions'
 // Vue.use(Vuex)
-if (process.env.NODE_ENV === 'development') {
-  Vue.use(Vuex)
-}
+Vue.use(Vuex)
 
 export default new Vuex.Store({
   strict: process.env.NODE_ENV !== "production",
