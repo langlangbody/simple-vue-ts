@@ -5,4 +5,3 @@ declare module 'exif-js'
 declare module 'amplitude-js'
 
 
-
