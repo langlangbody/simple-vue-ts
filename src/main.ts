@@ -36,9 +36,9 @@ import './assets/css/rest.scss'
 
 // 使用axios
 // 开发模式下使用mock数据
-if (process.env.NODE_ENV === 'development') {
+// if (process.env.NODE_ENV === 'development') {
   require('./config/axios-mock')
-}
+// }
 
 new Vue({
   router,

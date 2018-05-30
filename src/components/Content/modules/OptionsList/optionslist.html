@@ -1,14 +1,21 @@
 <v-flex xs2 class="options-list">
-  <div class="layout" v-if="check === 'layouts'">
-      
-  </div>
-  <div class="frame" v-if="check === 'sticker'">
-      frame
-  </div>
-  <div class="text" v-if="check === 'font'">
-      text
-  </div>
-  <div class="bg" v-if="check === 'bg'">
-      bg
-  </div>
+  <ul class="layout" ref="listData" id="scroll-target" v-if="listData && check === 'layouts'" v-scroll:#scroll-target="onScroll">
+    <li class="item" v-for="(item,index) in listData.layouts" :key="index" @click="on_itemClick(item)">
+      <img class="layout_img" :src="item.thumb_path" alt="thumb_path">
+      <p class="text">{{item.sku}}</p>
+    </li>
+  </ul>
+  <ul class="frame" v-if="listData && check === 'sticker'">
+    frame
+  </ul>
+  <ul class="text" v-if="listData && check === 'font'">
+    text
+  </ul>
+  <ul class="bg" v-if="listData && check === 'bg'">
+    bg
+  </ul>
+  <content-placeholders v-if="!listData || listData.layouts === 0" v-for="item in [1,2,3,4]" :key="item" :rounded="true" class="conter">
+    <content-placeholders-img />
+    <content-placeholders-text :lines="1" />
+  </content-placeholders>
 </v-flex>

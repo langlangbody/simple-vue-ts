@@ -1,5 +1,40 @@
-.options-list{
-  background-color: #3F4651;
-  overflow: hidden;
-  height: 100%;
+.options-list {
+  width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #3F4651;
+    overflow: hidden;
+    padding-top: 2.875rem;
+    height: 100%;
+    overflow: visible;
+    ul {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 100%;
+        padding: 20px 0;
+    }
+    .conter {
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+        .vue-content-placeholders-text__line {
+            margin: 0 auto;
+        }
+        .vue-content-placeholders-img {
+            height: 90px;
+        }
+    }
+    li.item {
+        margin-top: 10px;
+    }
+    .layout {
+        .layout_img {
+            width: 80%;
+            height: 80px;
+        }
+        .text {
+            color: #fff;
+        }
+    }
 }

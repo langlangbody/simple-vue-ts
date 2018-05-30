@@ -95,8 +95,7 @@ export default class Theme extends Vue {
   }
   async get_themeList(page:number) {
     let res_list = await axios.get(`/themes?page=${page}`)
-    console.log(res_list);
-    
+    console.log('主题列表',res_list);
     this.desserts = []
     this.desserts = res_list.data.themes.map((item:any)=>{
       if (item.created_at) {

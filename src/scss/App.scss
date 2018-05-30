@@ -8,3 +8,17 @@
     height: 100%;
   }
 }
+  
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+}

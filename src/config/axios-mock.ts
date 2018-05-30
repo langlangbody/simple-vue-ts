@@ -22,8 +22,15 @@ axios.interceptors.response.use((response) => {
   return Promise.reject(error)
 })
 // set delay response time to 300ms
-const mock = new MockAdapter(axios, { delayResponse: 300 });
+const mock = new MockAdapter(axios, { delayResponse: 1000 });
 
-// 用户上传信息 后台生成的个人信息
+// 主题列表 
 import themeList from '@/mockData/themeList';
 mock.onGet(/\/theme\/*/).reply(200, themeList);
+
+// 布局列表
+import Layouts from "@/mockData/layoutsList";
+mock.onGet(/\/layouts\/*/).reply(200, Layouts);
+
+import Materials from "@/mockData/layoutsList";
+mock.onGet(/\/materials\/*/).reply(200, Materials);

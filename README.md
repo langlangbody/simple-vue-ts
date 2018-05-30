@@ -174,3 +174,8 @@ declare global {
 window.FileReader = window.FileReader || {}
 
 ```
+
+> 使用ref时的正确方法
+```js
+let dom_height = (this.$refs["listData"] as HTMLElement).clientHeight
+```

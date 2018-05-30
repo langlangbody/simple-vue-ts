@@ -1,5 +1,5 @@
 <div class="content">
-  <cl-theme v-show="type === 'theme'"></cl-theme>
+  <cl-theme v-if="type === 'theme'"></cl-theme>
   <cl-option-list v-show="type !== 'theme'"></cl-option-list>
   <cl-drawing v-show="type !== 'theme'"></cl-drawing>
 </div>
