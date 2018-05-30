@@ -1,10 +1,13 @@
 import { Component, Vue } from 'vue-property-decorator'
+import '@/scss/App.scss'
 @Component({
   template: `
     <v-app>
-      <transition name="v-fade-transition">
-        <router-view/>
-      </transition>
+      <v-content>
+        <transition name="v-fade-transition">
+          <router-view/>
+        </transition>
+        </v-content>
     </v-app>
   `,
   components: {

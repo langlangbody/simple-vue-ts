@@ -2,7 +2,7 @@ import * as TYPES from '../types'
 import { MutationTree, Module } from "vuex";
 
 const state: StateSnackBar = {
-  axiosState: false,
+  axiosState: true,
   shareImg:'',
   snack:''
 }

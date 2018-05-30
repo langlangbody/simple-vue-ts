@@ -1,0 +1,6 @@
+<div class="tab-bar flex xs1">
+  <v-btn class="cl-tabs" flat v-for="(item,index) in tabBar" :class="{current: cur === index}" :key="index+'tabBar'" @click="on_tab_click(item.type,index)">
+    <v-icon>{{item.icon}}</v-icon>
+    <span>{{item.name}}</span>
+  </v-btn>
+</div>

@@ -1,0 +1,72 @@
+<v-flex xs12 class="theme">
+  <div class="th-title th-top">
+    <span>主题</span>
+    <v-btn slot="activator" round small color="info" @click="editItem(editedItem)">添加主题 ＋</v-btn>
+  </div>
+  <div class="th-title pages" v-if="asyncdata">
+    <p class="view-details">当前页数 {{ asyncdata.page }} 共 {{ asyncdata.total_count }}</p>
+    <v-btn icon class="style" :disabled="false" @click="on_nextPage('pre')">
+      <v-icon>keyboard_arrow_left</v-icon>
+    </v-btn>
+    <v-btn class="style" :disabled="false" icon @click="on_nextPage('next')">
+      <v-icon>keyboard_arrow_right</v-icon>
+    </v-btn>
+  </div>
+  <div class="table">
+    <v-dialog v-model="dialog" max-width="500px">
+      <v-card>
+        <v-card-title>
+          <span class="headline">{{ formTitle }}</span>
+        </v-card-title>
+        <v-card-text>
+          <v-container grid-list-md>
+            <v-layout wrap>
+              <v-flex xs12 sm6 md4>
+                <v-text-field v-model="editedItem.name" label="name"></v-text-field>
+              </v-flex>
+              <v-flex xs12 sm6 md4>
+                <v-text-field v-model="editedItem.thumb_path" label="缩略图"></v-text-field>
+              </v-flex>
+              <v-flex xs12 sm6 md4>
+                <v-text-field v-model="editedItem.state" label="状态"></v-text-field>
+              </v-flex>
+              <v-flex xs12 sm6 md4>
+                <v-text-field v-model="NowTime" label="创建时间"></v-text-field>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="blue darken-1" flat @click.native="close">Cancel</v-btn>
+          <v-btn color="blue darken-1" flat @click.native="save">Save</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+    <v-data-table v-if=" desserts &&desserts.length > 0" :headers="headers" :items="desserts" hide-actions class="elevation-1">
+      <template slot="items" slot-scope="props">
+        <td>{{ props.item.name }}</td>
+        <td>
+          <img class="thumbnail" :src="props.item.thumb_path" :alt="props.item.thumb_path">
+        </td>
+        <td>{{ props.item.state }}</td>
+        <td>{{ props.item.created_at }}</td>
+        <td>
+          <v-btn icon class="mx-0" @click="editItem(props.item)">
+            <v-icon color="teal">edit</v-icon>
+          </v-btn>
+          <v-btn icon class="mx-0" @click="deleteItem(props.item)">
+            <v-icon color="pink">delete</v-icon>
+          </v-btn>
+        </td>
+      </template>
+    </v-data-table :rounded="true">
+    <content-placeholders style="margin-left: 50px;padding: 20px 0 50px" v-if="desserts.length === 0">
+      <content-placeholders-heading :img="true" />
+      <content-placeholders-heading :img="true" />
+      <content-placeholders-heading :img="true" />
+      <content-placeholders-heading :img="true" />
+      <content-placeholders-heading :img="true" />
+    </content-placeholders>
+  </div>
+</v-flex>

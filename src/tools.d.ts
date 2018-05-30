@@ -4,4 +4,4 @@ declare module 'qiniu-js'
 declare module 'exif-js'
 declare module 'amplitude-js'
 
-
+declare module 'vue-content-placeholders'

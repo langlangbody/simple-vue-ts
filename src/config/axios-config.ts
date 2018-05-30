@@ -1,5 +1,5 @@
 import axios from 'axios';
-// axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? 'http1':'http2'
+axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? 'http://templates.shiyi.co/api':'http2'
 axios.defaults.timeout = 10 * 1000;
 interface Res {
   result:string,
@@ -17,7 +17,7 @@ axios.interceptors.response.use(function (response) {
 
   // 更新 state 中 Authorization 一项
   // store.dispatch('chang_Axios',false)
-  return response;
+  return response.data;
 }, function (error) {
   // store.dispatch('chang_Axios',false)
     console.log(error)

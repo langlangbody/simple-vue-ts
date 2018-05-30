@@ -1,0 +1,32 @@
+.tab-bar{
+  height: 100%;
+  overflow: hidden;
+  background: #363535;
+  .icon{
+    display: block;
+    font-size: 28px !important;
+    color: #E1E1E3 !important;
+  }
+  .cl-tabs{
+    width: 100%;
+    display: block;
+    height: 100px;
+    // padding: 26px 0;
+    margin: 0;
+  }
+  span{
+    display: block;
+    color: #E1E1E3;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .btn__content{
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .current{
+    
+    background-color: #3F4651 !important;
+    border-left: 3px solid #65B6F7;
+  }
+}

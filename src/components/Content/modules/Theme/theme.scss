@@ -1,0 +1,39 @@
+.theme{
+  overflow: hidden;
+  .th-title{
+    height: 3.875rem;
+    border-bottom: .0625rem solid #989A9C;
+    span{
+      margin-right: 1.25rem;
+      font-size: 32px;
+      color: #333333;
+    }
+  }
+  .pages{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 3.75rem;
+    .style{
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border: 1px solid #C6CBD4;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+  .th-top{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 3.75rem;
+    height: 4.5rem;
+  }
+  .thumbnail{
+    display: block;
+    width: 5.3125rem;
+    height: 5.3125rem;
+    margin: 10px auto;
+  }
+}

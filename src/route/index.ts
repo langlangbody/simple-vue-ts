@@ -35,8 +35,12 @@ const ROUTER_CONFIG: RouterOptions = {
   base: __dirname,
   mode: 'history',
   routes: [
-    route('/','views/Index'),
-    route('/about','views/About')
+    {
+      path: '/',
+      name:'index',
+      component: (resolve:any) => import('@/views/Index').then(module => module)
+    }
+    // route('/','views/Index')
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

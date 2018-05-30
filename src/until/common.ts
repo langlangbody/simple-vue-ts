@@ -1,0 +1,29 @@
+export default {
+  tabbar:[
+    {
+      type:'theme',
+      name:'主题',
+      icon:'filter_b_and_w'
+    },
+    {
+      type:'layouts',
+      name:'布局',
+      icon:'view_quilt'
+    },
+    {
+      type:'sticker',
+      name:'图片框',
+      icon:'add_photo_alternate'
+    },
+    {
+      type:'font',
+      name:'文字',
+      icon:'text_rotation_none'
+    },
+    {
+      type:'bg',
+      name:'背景',
+      icon:'art_track'
+    }
+  ]
+}
