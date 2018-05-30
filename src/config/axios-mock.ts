@@ -32,5 +32,5 @@ mock.onGet(/\/theme\/*/).reply(200, themeList);
 import Layouts from "@/mockData/layoutsList";
 mock.onGet(/\/layouts\/*/).reply(200, Layouts);
 
-import Materials from "@/mockData/layoutsList";
+import Materials from "@/mockData/materials";
 mock.onGet(/\/materials\/*/).reply(200, Materials);

@@ -1,5 +1,4 @@
 import axios from 'axios';
-axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? 'http://templates.shiyi.co/api':'http2'
 axios.defaults.timeout = 10 * 1000;
 interface Res {
   result:string,
