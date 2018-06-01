@@ -9,6 +9,7 @@ import axios from 'axios';
 import './toolbar.scss'
 import wh_ratio from "@/until/wh_ratio";
 import font_fam_List from "@/until/font_list";
+import { FontColor, BgColor } from "@/until/font-tool";
 @Component({
   template: require('./toolbar.html'),
   components: {
@@ -45,10 +46,18 @@ export default class Toolbar extends Vue {
   // 所选的字体
   private check_font_fam:object ={}
   // 字体大小
-  private font_size:Array<number> = [12,14,16,18,20]
+  private font_size:Array<object> = [
+    {name:12},{name:14},{name:16},{name:18},{name:20}]
   // 所选的字体大小
   private check_fontSize:number = 12
-  
+  // 字体颜色数组列表
+  private font_colorList:Array<object> = FontColor
+  // 选中的字体颜色
+  private font_color_cur:string = ''
+  // 字体背景色列表
+  private bg_colorList:Array<object> = BgColor
+  // 选中的字体背景色
+  private bg_color_cur:string = ''
   @Getter get_navState!: string
   // 监听tab切换
   @Watch('get_navState')
@@ -66,10 +75,19 @@ export default class Toolbar extends Vue {
     this.get_choice_themes()
     this.get_choice_SKU()
   }
-
+  /**
+   * @name 点击事件
+   * **/ 
+  on_fontColorCl(c:string){
+    this.font_color_cur = c
+  }
+  on_bgColorCl(c:string){
+    this.bg_color_cur = c
+  }
   /**
    * @name 接口部分
    * @param get_choice_themes  // themes列表
+   * @param get_choice_SKU // sku列表
    * **/
 
   async get_choice_themes() {

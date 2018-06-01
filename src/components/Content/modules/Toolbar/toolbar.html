@@ -43,11 +43,62 @@
   </v-layout>
   <v-layout v-show="check === 'font'" class="start" fluid row wrap>
     <v-flex xs2>
-      <v-select :items="font_list" v-model="check_font_fam" item-text="name" label="选择字体" single-line auto :solo="true" append-icon="unfold_more" hide-details></v-select>
+      <v-select 
+      :items="font_list" 
+      v-model="check_font_fam" 
+      item-text="name" 
+      label="选择字体" 
+      single-line 
+      auto 
+      :solo="true" 
+      append-icon="unfold_more"
+      hide-details>
+    </v-select>
     </v-flex>
     <v-flex xs2>
-        <v-select :items="font_size" v-model="check_fontSize" label="size" single-line auto :solo="true" append-icon="unfold_more" hide-details></v-select>
+      <v-select 
+      :items="font_size" 
+      v-model="check_fontSize" 
+      item-text="name" 
+      label="size" 
+      single-line 
+      auto 
+      :solo="true" 
+      append-icon="unfold_more"
+      hide-details></v-select>
     </v-flex>
+    <v-flex xs1>
+      <v-menu offset-y>
+        <v-btn icon slot="activator">
+          <v-icon>format_color_text</v-icon>
+        </v-btn>
+        <div class="font-color-box">
+            <span
+            v-for="(item,index) in font_colorList"
+            @click="on_fontColorCl(item.color)"
+            :key="index +'font-color'"
+            class="color-picker-item" 
+            :class="{color_selected:font_color_cur===item.color}"
+            :style="{background:item.color}"></span>
+        </div>
+      </v-menu>
+    </v-flex>
+    <v-flex xs1>
+        <v-menu offset-y>
+          <v-btn icon slot="activator">
+            <v-icon>format_color_fill</v-icon>
+          </v-btn>
+          <div class="font-color-box">
+              <span
+              v-for="(item,index) in bg_colorList"
+              :key="index +'bg-color'"
+              :class="{color_selected:bg_color_cur === item.color}"
+              class="color-picker-item"
+              @click="on_bgColorCl(item.color)" 
+              :style="{background:item.color}"></span>
+          </div>
+        </v-menu>
+      </v-flex>
   </v-layout>
   <v-layout v-show="check === 'bg'" class="around" fluid row wrap>
     <v-flex xs3></v-flex>
