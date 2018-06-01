@@ -37,16 +37,34 @@
             color: #fff;
         }
     }
-    .layout .layout_img{
+    .layout .layout_img {
         height: 80px;
     }
-    .frame .layout_img{
+    .frame .layout_img {
         width: 120px;
         height: 120px;
     }
-    .bg .layout_img{
+    .bg .layout_img {
         width: 120px;
-       height: 120px;
+        height: 120px;
     }
-
+    .loading img {
+        width: 50px;
+    }
+    .text {
+        .font-style {
+            cursor: pointer;
+            .f-title {
+                font-size: 34px;
+                color: #9B9B9B;
+                text-align: center;
+                padding-bottom: 16px;
+            }
+            .f-info {
+                font-size: 14px;
+                color: #9B9B9B;
+                text-align: center;
+            }
+        }
+    }
 }

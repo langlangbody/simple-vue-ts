@@ -1,5 +1,4 @@
 <v-flex xs2 class="options-list">
-
   <!-- 布局 -->
   <ul class="layout" ref="listData" id="scroll-target" v-scroll:#scroll-target="onScroll" v-if="listData.length !== 0 && check === 'layouts'">
     <li class="item" v-for="(item,index) in listData" :key="index" @click="on_itemClick(item)">
@@ -7,7 +6,8 @@
       <p class="text">{{item.sku}}</p>
     </li>
     <li class="loading" v-if="loading">
-        <v-progress-circular indeterminate color="green"></v-progress-circular>
+      <img src="http://dianshuco.qiniudn.com/temp/imagesbars.svg" alt="">  
+      <!-- <v-progress-circular indeterminate color="green"></v-progress-circular> -->
     </li>
   </ul>
   <!-- 贴图 -->
@@ -17,12 +17,16 @@
       <p class="text">{{item.sku}}</p>
     </li>
     <li class="loading">
-        <v-progress-circular indeterminate color="green"></v-progress-circular>
+      <img src="http://dianshuco.qiniudn.com/temp/imagesbars.svg" alt="">  
+      <!-- <v-progress-circular indeterminate color="green"></v-progress-circular> -->
     </li>
   </ul>
   <!-- 文字 -->
   <ul class="text" v-if="check === 'font'">
-    text
+    <li class="font-style">
+      <p class="f-title">+ 文字</p>
+      <p class="f-info">文字框</p>
+    </li>
   </ul>
   <!-- 背景 -->
   <ul class="bg" ref="listData" id="scroll-target" v-scroll:#scroll-target="onScroll" v-if="listData.length !== 0 && check === 'bg'">
@@ -31,7 +35,8 @@
       <p class="text">{{item.sku}}</p>
     </li>
     <li class="loading">
-        <v-progress-circular indeterminate color="green"></v-progress-circular>
+        <img src="http://dianshuco.qiniudn.com/temp/imagesbars.svg" alt="">
+        <!-- <v-progress-circular indeterminate color="green"></v-progress-circular> -->
     </li>
   </ul>
 

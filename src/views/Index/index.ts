@@ -5,7 +5,7 @@ import './index.scss'
   components:{
     Content: ()=> import('@/components/Content'),
     Header: ()=> import('@/components/Header'),
-    TabBar: ()=> import('@/components/TabBar')
+    TabBar: ()=> import('@/components/Content/modules/TabBar')
   }
 })
 export default class Index extends Vue {

@@ -1,0 +1,35 @@
+export default {
+  result: 'success',
+  data:[
+    {
+      name:'GH0921'
+    },
+    {
+      name:'GH230921'
+    },
+    {
+      name:'GH2220921'
+    },
+    {
+      name:'GH093321'
+    },
+    {
+      name:'GH12321'
+    },
+    {
+      name:'GHSSDW11'
+    },
+    {
+      name:'ASD12323'
+    },
+    {
+      name:'333AA11SS'
+    },
+    {
+      name:'2SDD2'
+    },
+    {
+      name:'23ZSZS'
+    }
+  ]
+}

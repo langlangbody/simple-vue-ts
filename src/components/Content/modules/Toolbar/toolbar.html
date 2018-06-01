@@ -1,0 +1,66 @@
+<div class="tool-bar">
+  <v-layout v-show="check === 'layouts'" class="around" fluid row wrap>
+    <v-flex xs3>
+      <v-select :items="themeList" :label="check_theme.name?check_theme.name:'选择主题'" item-text="name" v-model="check_theme" :solo="true"
+        single-line></v-select>
+    </v-flex>
+    <v-flex xs3>
+      <v-select :items="wh_ratio_List" :label="check_theme.name?check_ratio.name:'宽高比'" item-text="name" v-model="check_ratio"
+        :solo="true" single-line></v-select>
+    </v-flex>
+    <v-flex xs3>
+      <v-checkbox v-model="Cross_page" label="跨页输出" color="secondary" value="Cross_page" hide-details></v-checkbox>
+    </v-flex>
+
+  </v-layout>
+  <v-layout v-show="check === 'layouts'" class="around" fluid row wrap>
+    <v-flex xs3>
+      <v-checkbox v-model="Cross_photo" label="照片不可跨页" color="secondary" value="Cross_photo" hide-details></v-checkbox>
+    </v-flex>
+    <v-flex xs3>
+      <v-checkbox v-model="Cross_cover" label="封面布局" color="secondary" value="Cross_cover" hide-details></v-checkbox>
+    </v-flex>
+    <v-flex xs3>
+      <v-select :items="SKUList" :label="check_SKU.name?check_SKU.name:'SKU'" item-text="name" v-model="check_ratio" :solo="true"
+        single-line></v-select>
+    </v-flex>
+  </v-layout>
+  <v-layout v-show="check === 'sticker'" class="around" fluid row wrap>
+    <v-flex xs3>
+      <v-checkbox v-model="Cross_logo" label="产品图标" color="secondary" value="Cross_logo" hide-details></v-checkbox>
+    </v-flex>
+    <v-flex xs3>
+      <v-btn icon>
+        <img src="./images/ic_text_fields_b.svg" alt="icon">
+      </v-btn>
+      <v-btn icon>
+        <img src="./images//ic_text_fields_t.svg" alt="icon">
+      </v-btn>
+      <v-btn icon>
+        <v-icon>delete_sweep</v-icon>
+      </v-btn>
+    </v-flex>
+  </v-layout>
+  <v-layout v-show="check === 'font'" class="start" fluid row wrap>
+    <v-flex xs2>
+      <v-select :items="font_list" v-model="check_font_fam" item-text="name" label="选择字体" single-line auto :solo="true" append-icon="unfold_more" hide-details></v-select>
+    </v-flex>
+    <v-flex xs2>
+        <v-select :items="font_size" v-model="check_fontSize" label="size" single-line auto :solo="true" append-icon="unfold_more" hide-details></v-select>
+    </v-flex>
+  </v-layout>
+  <v-layout v-show="check === 'bg'" class="around" fluid row wrap>
+    <v-flex xs3></v-flex>
+    <v-flex xs3>
+      <v-btn icon>
+        <img src="./images/ic_text_fields_b.svg" alt="icon">
+      </v-btn>
+      <v-btn icon>
+        <img src="./images//ic_text_fields_t.svg" alt="icon">
+      </v-btn>
+      <v-btn icon>
+        <v-icon>delete_sweep</v-icon>
+      </v-btn>
+    </v-flex>
+  </v-layout>
+</div>

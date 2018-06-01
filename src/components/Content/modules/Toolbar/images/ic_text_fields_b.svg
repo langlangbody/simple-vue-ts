@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch Beta 50 (54675) - http://www.bohemiancoding.com/sketch -->
+    <title>ICON/ic_text_fields_24px Copy 2</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs>
+        <path d="M7.5,5 L5,5 L5,7.5 L7.5,7.5 L7.5,5 Z M7.5,10 L5,10 L5,12.5 L7.5,12.5 L7.5,10 Z M7.5,0 C6.1125,0 5,1.125 5,2.5 L7.5,2.5 L7.5,0 Z M12.5,15 L10,15 L10,17.5 L12.5,17.5 L12.5,15 Z M20,0 L20,2.5 L22.5,2.5 C22.5,1.125 21.375,0 20,0 Z M12.5,0 L10,0 L10,2.5 L12.5,2.5 L12.5,0 Z M7.5,17.5 L7.5,15 L5,15 C5,16.375 6.1125,17.5 7.5,17.5 Z M20,12.5 L22.5,12.5 L22.5,10 L20,10 L20,12.5 Z M20,7.5 L22.5,7.5 L22.5,5 L20,5 L20,7.5 Z M20,17.5 C21.375,17.5 22.5,16.375 22.5,15 L20,15 L20,17.5 Z M2.5,5 L0,5 L0,20 C0,21.375 1.1125,22.5 2.5,22.5 L17.5,22.5 L17.5,20 L2.5,20 L2.5,5 Z M15,2.5 L17.5,2.5 L17.5,0 L15,0 L15,2.5 Z M15,17.5 L17.5,17.5 L17.5,15 L15,15 L15,17.5 Z" id="path-1"></path>
+    </defs>
+    <g id="Board-view" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="frame-view" transform="translate(-954.000000, -78.000000)">
+            <rect id="Background" fill="#EEF2F9" x="0" y="0" width="1118" height="900"></rect>
+            <g id="Top-nav" fill="#FFFFFF">
+                <rect id="Background" x="284" y="60" width="833" height="60"></rect>
+            </g>
+            <g id="ICON/ic_flip_to_back_24px" transform="translate(951.000000, 75.000000)">
+                <polygon id="Shape" points="0 0 30 0 30 30 0 30"></polygon>
+                <g id="COLOR" stroke-width="1" fill-rule="evenodd" transform="translate(3.750000, 3.750000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="BG/1-Black" mask="url(#mask-2)" fill="#3B3F4B">
+                        <g transform="translate(-18.750000, -18.750000)" id="BG">
+                            <rect x="0" y="0" width="60" height="60"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

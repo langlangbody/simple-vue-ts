@@ -32,5 +32,14 @@ mock.onGet(/\/theme\/*/).reply(200, themeList);
 import Layouts from "@/mockData/layoutsList";
 mock.onGet(/\/layouts\/*/).reply(200, Layouts);
 
+// 素材列表
 import Materials from "@/mockData/materials";
 mock.onGet(/\/materials\/*/).reply(200, Materials);
+
+// 选择的主题列表
+import ChoiceThemes from "@/mockData/Choice_theme";
+mock.onGet(/\/ChoiceThemes\/*/).reply(200, ChoiceThemes);
+
+// SKU列表
+import ChoiceSKU from "@/mockData/Sku";
+mock.onGet(/\/ChoiceSKU\/*/).reply(200, ChoiceSKU);
