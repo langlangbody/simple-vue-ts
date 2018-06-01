@@ -1,4 +1,6 @@
-[项目demo](https://xll.netlify.com/)
+[github源码](https://github.com/langlangbody/simple-vue-ts)
+
+[项目demo](https://vue-demo.netlify.com/)
 ## 关于typescript详细配制
 [tsconfig配制详情](https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/Compiler%20Options.html)
 
